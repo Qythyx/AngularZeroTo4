@@ -1,0 +1,16 @@
+{
+	"name": "angular-zero",
+	"version": "1.0.0",
+	"scripts": {
+		"build": "npm run build-static && npm run build-ts",
+		"build-static": "copyfiles -u 1 src/**/*.html src/**/*.css distrib",
+		"build-ts": "tsc -p src --outDir distrib",
+		"serve": "lite-server",
+		"start": "npm run build && npm run serve"
+	},
+	"devDependencies": {
+		"copyfiles": "~1.2.0",
+		"lite-server": "^2.2.2",
+		"typescript": "~2.1.0"
+	}
+}
